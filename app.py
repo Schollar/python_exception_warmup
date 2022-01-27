@@ -26,9 +26,11 @@ try:
             input("Please select the number you would like to choose: "))
     # Call the run_choice function with the users choice - 1 (because arrays count from 0)
         run_choice(user_input - 1)
+# Creating these two specific exceptions throws the user an error if the input is something we do not expect
 except IndexError:
     print('You must choose a number from the list!')
 except ValueError:
     print('Input must be a number!')
+# This is a general exception for anything else the user throws at us that I may have missed
 except:
     print('Something went wrong, you must input a number')
